@@ -1,0 +1,104 @@
+.cart {
+  display: none;
+}
+.cart:hover {
+  display: flex;
+}
+.btn:hover ~ .cart {
+  display: flex;
+}
+.effect {
+  transition: background-color 0.2s ease-in-out, height 0.5s ease-in-out;
+}
+.customShadow {
+  box-shadow: 0px 0px 30px #131313;
+}
+.imgs {
+  width: 255px;
+  aspect-ratio: auto 255 / 245;
+  height: 245px;
+  background-size: cover;
+}
+.shopMbList {
+  height: 640px;
+}
+@media (max-width: 430px) {
+  .imgs {
+    width: 150px;
+    aspect-ratio: auto 1 / 1;
+    height: 150px;
+  }
+  .shopMbList {
+    height: 520px;
+  }
+}
+/* /////////////////////////////////////////////////////////////// */
+.homeList {
+  opacity: 0;
+  transition: all 0.4s ease;
+  transition-delay: 100ms;
+  transform: translateY(5%);
+  pointer-events: none;
+}
+.homeLink:hover .homeList,
+.homeList:hover {
+  opacity: 1;
+  transform: translateY(0%);
+  pointer-events: auto;
+}
+/* //////////////////////////////////////////////////////// */
+.teamList {
+  opacity: 0;
+  transition: all 0.4s ease;
+  transition-delay: 100ms;
+  transform: translateY(5%);
+  pointer-events: none;
+}
+.teamLink:hover .teamList,
+.teamList:hover {
+  opacity: 1;
+  transform: translateY(0%);
+  pointer-events: auto;
+}
+/* /////////////////////////////////////////////////////////////// */
+.shopList {
+  opacity: 0;
+  transition: all 0.4s ease;
+  transition-delay: 100ms;
+  transform: translateY(5%);
+  pointer-events: none;
+}
+.shopLink:hover ~ .shopList,
+.shopList:hover {
+  opacity: 1;
+  transform: translateY(0%);
+  pointer-events: auto;
+}
+/* /////////////////////////////////////////////////////////////// */
+.blogList {
+  opacity: 0;
+  transition: all 0.4s ease;
+  transition-delay: 100ms;
+  transform: translateY(5%);
+  pointer-events: none;
+}
+.blogLink:hover .blogList,
+.bloglist:hover {
+  opacity: 1;
+  transform: translateY(0%);
+  pointer-events: auto;
+}
+/* /////////////////////////////////////////////////////////////// */
+.forumsList {
+  opacity: 0;
+  transition: all 0.4s ease;
+  transition-delay: 100ms;
+  transform: translateY(5%);
+  pointer-events: none;
+}
+.forumsLink:hover .forumsList,
+.forumsList:hover {
+  opacity: 1;
+  transform: translateY(0%);
+  pointer-events: auto;
+}
