@@ -1,0 +1,42 @@
+.datePostionLeft {
+  transform: rotateZ(-90deg) translateY(50%);
+}
+.datePostionRight {
+  transform: rotateZ(-90deg);
+}
+.eventContainer {
+  max-width: 100%;
+  width: 75%;
+}
+.eventContainer > div {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 998/550;
+  min-height: 550px;
+}
+.eventContainer > a:hover ~ div .eventImg {
+  transform: scale(1.1);
+}
+.eventImg {
+  width: 100%;
+  object-position: top;
+  transition: all 1.7s ease;
+}
+.eventBtnsLeft svg {
+  transition: 0.5s ease;
+}
+.eventBtnsLeft:hover svg {
+  transform: translateX(-100%);
+}
+.eventBtnsLeft:hover > div img {
+  transform: scale(1.1);
+}
+.eventBtnsRight:hover > div img {
+  transform: scale(1.1);
+}
+.eventBtnsRight svg {
+  transition: 0.5s ease;
+}
+.eventBtnsRight:hover svg {
+  transform: translateX(100%);
+}

@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import "../navBar.css";
+import "../../../navBar.css";
 
 function HomeList({ inMobile }: { inMobile: boolean }) {
   return (

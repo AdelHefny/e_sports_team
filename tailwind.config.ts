@@ -9,11 +9,13 @@ const config: Config = {
   theme: {
     colors: {
       purple: "#696bff",
+      extraPurple: "#8442FD",
       transparent: "transparent",
       current: "currentColor",
       white: "#ffffff",
       gray: {
         "400": "#929292",
+        "450": "#686868",
         "500": "#313035",
         "600": "#37363b",
         "700": "#1f1f22",

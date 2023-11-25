@@ -1,6 +1,7 @@
 "use client";
 import { cartContext, productType } from "./cartContext";
-import NavBar from "./components/navBar/components/navBar/navBar";
+import HomePage from "./components/frontPage/homePage";
+import NavBar from "./components/navBar/navBar";
 import { useContext, useState } from "react";
 
 export default function Home() {
@@ -10,8 +11,9 @@ export default function Home() {
   };
   return (
     <cartContext.Provider value={[cartProducts, cartSetter]}>
-      <main className="bg-gray-850 spotLight">
+      <main className="bg-gray-850 spotLight overflow-hidden">
         <NavBar />
+        <HomePage />
       </main>
     </cartContext.Provider>
   );

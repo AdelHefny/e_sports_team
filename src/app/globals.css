@@ -28,7 +28,7 @@ body {
 .spotLight {
   background-image: radial-gradient(
     circle at 0% 0%,
-    rgb(256, 256, 256, 0.07),
+    rgba(232, 197, 236, 0.1),
     #202125 15%
   );
   height: 10000px;

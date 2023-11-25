@@ -3,17 +3,17 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons/faDiscord";
 import { faTwitch } from "@fortawesome/free-brands-svg-icons/faTwitch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import ShoppingBtn from "./shoppingBtn";
-import BurgerBtn from "./burgerBtn";
+import ShoppingBtn from "./components/navBar/shoppingBtn";
+import BurgerBtn from "./components/navBar/burgerBtn";
 import "./navBar.css";
-import HomeList from "./Lists/homeList";
-import TeamMatchesList from "./Lists/teamMatchesList";
-import ShopList from "./Lists/shopList";
-import BlogList from "./Lists/blogList";
+import HomeList from "./components/navBar/Lists/homeList";
+import TeamMatchesList from "./components/navBar/Lists/teamMatchesList";
+import ShopList from "./components/navBar/Lists/shopList";
+import BlogList from "./components/navBar/Lists/blogList";
 
 function NavBar() {
   return (
-    <nav className="relative flex flex-row min-h-[84px] max-h-[170px] bg-transparent justify-between max-w-full px-8 md:px-0 md:max-w-[1100px] mx-auto md:space-x-12 items-center z-10">
+    <nav className="relative flex flex-row min-h-[84px] z-50 max-h-[170px] bg-transparent justify-between max-w-full px-8 md:px-0 md:max-w-[1050px] mx-auto md:space-x-12 items-center">
       <div>
         <Link href={"/"} className="text-3xl text-white font-bold">
           RESP<span className="text-purple">AWN</span>

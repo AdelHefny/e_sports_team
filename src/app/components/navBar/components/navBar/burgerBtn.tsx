@@ -5,7 +5,7 @@ import HomeList from "./Lists/homeList";
 import TeamMatchesList from "./Lists/teamMatchesList";
 import ShopList from "./Lists/shopList";
 import BlogList from "./Lists/blogList";
-import "./navBar.css";
+import "../../navBar.css";
 function BurgerBtn() {
   const [show, setShow] = useState(false);
   const [showHome, setShowHome] = useState(false);

@@ -3,7 +3,7 @@ import { cartContext } from "@/app/cartContext";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons/faBagShopping";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext } from "react";
-import "./navBar.css";
+import "../../navBar.css";
 function ShoppingBtn() {
   const [cartProducts] = useContext(cartContext);
   return (

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import "../navBar.css";
+import "../../../navBar.css";
 
 function TeamMatchesList({ inMobile }: { inMobile: boolean }) {
   return (

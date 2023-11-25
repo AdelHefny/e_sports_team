@@ -1,5 +1,5 @@
 import Link from "next/link";
-import "../navBar.css";
+import "../../../navBar.css";
 function BlogList({ inMobile }: { inMobile: boolean }) {
   return (
     <ul

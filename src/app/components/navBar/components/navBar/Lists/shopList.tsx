@@ -24,7 +24,7 @@ function ShopList({ inMobile }: { inMobile: boolean }) {
               alt={`${ele.productName} image`}
               width={255}
               height={245}
-              className={`max-w-full imgs transition-all duration-500 ${
+              className={`max-w-full imgs transition-all duration-500 object-cover ${
                 inMobile ? "hover:grayscale" : ""
               }`}
             />
