@@ -40,3 +40,15 @@
 .eventBtnsRight:hover svg {
   transform: translateX(100%);
 }
+.resize {
+  height: 100%;
+  transition: all 0.5s;
+}
+.title {
+  transition: opacity 0.1s, transform 0.3s;
+  transition-delay: 0.1s, 0s;
+}
+.bigTitle {
+  transition: opacity 0.1s, transform 0.4s;
+  transition-delay: 0.4s, 0.3s;
+}

@@ -3,6 +3,7 @@ import { cartContext, productType } from "./cartContext";
 import HomePage from "./components/frontPage/homePage";
 import NavBar from "./components/navBar/navBar";
 import { useContext, useState } from "react";
+import Sponsors from "./components/sponsors/sponsors";
 
 export default function Home() {
   const [cartProducts, setCartProducts] = useState<productType[]>([]);
@@ -11,9 +12,10 @@ export default function Home() {
   };
   return (
     <cartContext.Provider value={[cartProducts, cartSetter]}>
-      <main className="bg-gray-850 spotLight overflow-hidden">
+      <main className="bg-gray-850 spotLight overflow-hidden relative">
         <NavBar />
         <HomePage />
+        <Sponsors />
       </main>
     </cartContext.Provider>
   );

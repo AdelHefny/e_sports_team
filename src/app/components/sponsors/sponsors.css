@@ -1,0 +1,24 @@
+.carousel.dragging {
+  scroll-behavior: auto;
+}
+.carousel {
+  scroll-behavior: smooth;
+}
+.carousel div {
+  min-width: calc(100% / 5);
+}
+@media (max-width: 900px) {
+  .carousel div {
+    min-width: calc(100% / 4);
+  }
+}
+@media (max-width: 550px) {
+  .carousel div {
+    min-width: calc(100% / 3);
+  }
+}
+@media (max-width: 410px) {
+  .carousel div {
+    min-width: calc(100% / 2);
+  }
+}
