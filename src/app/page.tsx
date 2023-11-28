@@ -4,6 +4,7 @@ import HomePage from "./components/frontPage/homePage";
 import NavBar from "./components/navBar/navBar";
 import { useContext, useState } from "react";
 import Sponsors from "./components/sponsors/sponsors";
+import Highlights from "./components/highlights/highlights";
 
 export default function Home() {
   const [cartProducts, setCartProducts] = useState<productType[]>([]);
@@ -16,6 +17,7 @@ export default function Home() {
         <NavBar />
         <HomePage />
         <Sponsors />
+        <Highlights />
       </main>
     </cartContext.Provider>
   );

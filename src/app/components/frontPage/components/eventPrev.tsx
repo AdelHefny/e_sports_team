@@ -94,38 +94,42 @@ function EventPrev({
       >
         <FontAwesomeIcon icon={faAngleLeft} className="mt-4 mr-4" />
         <div className="relative overflow-hidden w-[80%] h-[60%] translate-x-1/2">
-          <Image
-            className="object-cover transition-all duration-500 "
-            src={data[eventNum - 1 < 0 ? data.length - 1 : eventNum - 1].img}
-            alt={`${
-              data[eventNum - 1 < 0 ? data.length - 1 : eventNum - 1].title
-            }`}
-          />
-          <div
-            ref={leftBtnImg}
-            className="absolute w-full bottom-0 left-0 transition-all duration-500 h-0 bg-gray-700"
-          ></div>
+          <div className="relative">
+            <Image
+              className="object-cover transition-all duration-500"
+              src={data[eventNum - 1 < 0 ? data.length - 1 : eventNum - 1].img}
+              alt={`${
+                data[eventNum - 1 < 0 ? data.length - 1 : eventNum - 1].title
+              }`}
+            />
+            <div
+              ref={leftBtnImg}
+              className="absolute w-full bottom-0 left-0 transition-all duration-500 h-0 bg-gray-700"
+            ></div>
+          </div>
         </div>
       </button>
       <button
-        className="absolute bg-extraPurple flex pb-4 flex-col  items-start justify-between w-1/3 h-[220px] translate-x-1/2 right-0 bottom-0 z-50 text-2xl eventBtnsRight"
+        className="absolute bg-extraPurple flex pb-4 flex-col  items-start justify-between w-1/3 space-y-2 h-[220px] translate-x-1/2 right-0 bottom-0 z-50 text-2xl eventBtnsRight"
         onClick={() => {
           rotateImg(true);
         }}
       >
         <FontAwesomeIcon icon={faAngleRight} className="mt-4 ml-4" />
-        <div className="relative w-[80%] h-[60%] overflow-hidden -translate-x-1/2">
-          <Image
-            className="object-cover transition-all duration-500"
-            src={data[eventNum + 1 > data.length - 1 ? 0 : eventNum + 1].img}
-            alt={`${
-              data[eventNum + 1 > data.length - 1 ? 0 : eventNum + 1].title
-            }`}
-          />
-          <div
-            ref={rightBtnImg}
-            className="absolute w-full bottom-0 left-0 h-0 transition-all duration-500 bg-gray-700"
-          ></div>
+        <div className="relative overflow-hidden w-[80%] h-[60%] -translate-x-1/2">
+          <div className="relative">
+            <Image
+              className="object-cover transition-all duration-500"
+              src={data[eventNum + 1 > data.length - 1 ? 0 : eventNum + 1].img}
+              alt={`${
+                data[eventNum + 1 > data.length - 1 ? 0 : eventNum + 1].title
+              }`}
+            />
+            <div
+              ref={rightBtnImg}
+              className="absolute w-full bottom-0 left-0 transition-all duration-500 h-0 bg-gray-700"
+            ></div>
+          </div>
         </div>
       </button>
     </div>

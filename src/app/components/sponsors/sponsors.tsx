@@ -100,7 +100,7 @@ function Sponsors() {
           setHeighted((prev) => prev + 1);
           carousel.current.scrollLeft += imgWidth;
         } else {
-          setHeighted(() => 2);
+          setHeighted(() => Math.ceil(imgsInScreen / 2) - 1);
           carousel.current.scrollLeft = 0;
         }
       }
@@ -135,7 +135,7 @@ function Sponsors() {
   }, []);
   return (
     <section
-      className="relative z-50 -translate-y-[10%] max-w-[80%] bg-gray-699 mx-auto h-24 overflow-hidden"
+      className="relative z-40 -translate-y-[10%] max-w-[80%] bg-gray-699 mx-auto h-24 overflow-hidden"
       ref={carouselParent}
     >
       <div
