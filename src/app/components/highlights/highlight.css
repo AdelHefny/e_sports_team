@@ -1,0 +1,4 @@
+.popUpEffect {
+  transform: scale(min(var(--highlightScale), 1));
+  opacity: min(var(--highlightScale) - 0.2, 1);
+}

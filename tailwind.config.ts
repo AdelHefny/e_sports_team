@@ -13,7 +13,9 @@ const config: Config = {
       transparent: "transparent",
       current: "currentColor",
       white: "#ffffff",
+      phosphoras: "#09233a",
       gray: {
+        "300": "#c2c0c0",
         "400": "#929292",
         "450": "#686868",
         "500": "#313035",

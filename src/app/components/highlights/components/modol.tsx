@@ -1,6 +1,6 @@
 "use client";
 import "../../../globals.css";
-import { RefObject, Suspense } from "react";
+import { RefObject } from "react";
 function Modol({ modalRef }: { modalRef: RefObject<HTMLDivElement> }) {
   return (
     <div
@@ -12,10 +12,9 @@ function Modol({ modalRef }: { modalRef: RefObject<HTMLDivElement> }) {
       ref={modalRef}
     >
       <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/fB8TyLTD7EE?si=iVALPc1qMrhRc5bJ"
+        src="https://www.youtube.com/embed/fB8TyLTD7EE?si=f_-VLguNyNL4njb0"
         title="YouTube video player"
+        className="w-[90%] h-[51%] sm:w-[560px] sm:h-[315px]"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>

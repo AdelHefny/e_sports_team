@@ -23,9 +23,12 @@ function EventPrev({
   const mainImg = useRef<HTMLDivElement>(null);
   const readMore = useRef<HTMLAnchorElement>(null);
   const rotateImg = (value: boolean) => {
-    mainImg.current?.classList.add("resize");
-    leftBtnImg.current?.classList.add("resize");
-    rightBtnImg.current?.classList.add("resize");
+    mainImg.current?.classList.add("resizeDiv");
+    leftBtnImg.current?.classList.add("resizeDiv");
+    rightBtnImg.current?.classList.add("resizeDiv");
+    mainImg.current?.classList.remove("h-0");
+    leftBtnImg.current?.classList.remove("h-0");
+    rightBtnImg.current?.classList.remove("h-0");
     mainImg.current?.classList.add("top-0");
     mainImg.current?.classList.remove("bottom-0");
     mainImg.current?.parentElement?.children[0].classList.remove("scale-110");
@@ -46,9 +49,12 @@ function EventPrev({
     }, 300);
     setTimeout(() => {
       setEventNum(value);
-      mainImg.current?.classList.remove("resize");
-      leftBtnImg.current?.classList.remove("resize");
-      rightBtnImg.current?.classList.remove("resize");
+      mainImg.current?.classList.remove("resizeDiv");
+      leftBtnImg.current?.classList.remove("resizeDiv");
+      rightBtnImg.current?.classList.remove("resizeDiv");
+      mainImg.current?.classList.add("h-0");
+      leftBtnImg.current?.classList.add("h-0");
+      rightBtnImg.current?.classList.add("h-0");
       leftBtnImg.current?.classList.add("bottom-0");
       leftBtnImg.current?.classList.remove("top-0");
       rightBtnImg.current?.classList.add("bottom-0");

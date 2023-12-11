@@ -56,7 +56,6 @@ function Sponsors() {
           imgWidth * (data.length - imgsInScreen) - 50
         )
       ) {
-        console.log(imgWidth - positionDiff);
         if (Math.abs(imgWidth - positionDiff) >= 0) {
           if (carousel.current.scrollLeft > prevScrollLeft) {
             if (!(heighted >= data.length)) {
@@ -78,7 +77,6 @@ function Sponsors() {
     const currentCarousel = carousel.current;
     const currentCarouselParent = carouselParent.current;
     const handleCarouselScroll = () => {
-      console.log(window.innerWidth);
       let imgWidth = carousel.current?.children[0]?.clientWidth || 0;
       let imgsInScreen = 0;
       if (window.innerWidth > 900) {

@@ -1,0 +1,67 @@
+import fenaticIcon from "../../Images/pngwing.com (1).png";
+import vTeam from "../../Images/pngwing.com (2).png";
+import vTeam2 from "../../Images/pngwing.com (3).png";
+import secondTeamIcon from "../../Images/pngwing.com.png";
+
+export const matchList = [
+  {
+    id: 0,
+    title: "Dota 2 Asia Championships 2018",
+    date: "April 27, 2018 11:45 AM",
+    game: "leagueOfLegends",
+    firstTeamName: "benatic",
+    firstTeamIcon: fenaticIcon,
+    firstTeamScore: 120,
+    secundTeamName: "vteam",
+    secundTeamIcon: vTeam,
+    secondTeamScore: 185,
+  },
+  {
+    id: 1,
+    title: "BLAST Pro Series: Miami 2018",
+    date: "June 28, 2018 4:15 PM",
+    game: "dota2",
+    firstTeamName: "benatic",
+    firstTeamIcon: fenaticIcon,
+    firstTeamScore: 172,
+    secundTeamName: "Gteam",
+    secundTeamIcon: vTeam2,
+    secondTeamScore: 158,
+  },
+  {
+    id: 2,
+    title: "world tournament in csgo 2018",
+    date: "August 14, 2018 9:00 AM",
+    game: "csgo",
+    firstTeamName: "benatic",
+    firstTeamIcon: fenaticIcon,
+    firstTeamScore: 133,
+    secundTeamName: "Zteam",
+    secundTeamIcon: secondTeamIcon,
+    secondTeamScore: 135,
+  },
+  {
+    id: 3,
+    title: "Copenhagen Games 2018",
+    date: "August 19, 2018 3:00 PM",
+    game: "csgo",
+    firstTeamName: "benatic",
+    firstTeamIcon: fenaticIcon,
+    firstTeamScore: 133,
+    secundTeamName: "Zteam",
+    secundTeamIcon: secondTeamIcon,
+    secondTeamScore: 135,
+  },
+  {
+    id: 4,
+    title: "world tournament in csgo 2018",
+    date: "August 22, 2018 3:00 PM",
+    game: "csgo",
+    firstTeamName: "benatic",
+    firstTeamIcon: fenaticIcon,
+    firstTeamScore: 133,
+    secundTeamName: "Zteam",
+    secundTeamIcon: secondTeamIcon,
+    secondTeamScore: 135,
+  },
+];

@@ -16,7 +16,7 @@ function NavBar() {
     <nav className="relative flex flex-row min-h-[84px] z-50 max-h-[170px] bg-transparent justify-between max-w-full px-8 md:px-0 md:max-w-[1050px] mx-auto md:space-x-12 items-center">
       <div>
         <Link href={"/"} className="text-3xl text-white font-bold">
-          RESP<span className="text-purple">AWN</span>
+          SPA<span className="text-purple">WN</span>
         </Link>
       </div>
       <div className="md:flex hidden min-h-[84px] max-h-[170px]">

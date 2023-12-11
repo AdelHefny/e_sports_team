@@ -1,0 +1,51 @@
+.listGrid {
+  width: 90%;
+  display: grid;
+  min-height: 1000px;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 50%);
+}
+@media (max-width: 1024px) {
+  .listGrid {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(2, 50%);
+  }
+}
+.matchListBg1 {
+  background-image: url("../../Images/right-700x700\ \(1\).jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+  background-attachment: fixed;
+}
+.matchListBg2 {
+  background-image: url("../../Images/right-700x700\ \(1\).jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 200%;
+}
+.matchListBg3 {
+  background-image: url("../../Images/right-700x700\ \(1\).jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+  background-attachment: fixed;
+}
+.matchListBg4 {
+  background-image: url("../../Images/right-700x700\ \(1\).jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 200%;
+}
+.matchCard:hover img {
+  filter: grayscale(0);
+}
+.matchTitle {
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgb(14 14 14) 10%
+  );
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}

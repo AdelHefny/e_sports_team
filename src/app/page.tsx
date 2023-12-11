@@ -2,9 +2,11 @@
 import { cartContext, productType } from "./cartContext";
 import HomePage from "./components/frontPage/homePage";
 import NavBar from "./components/navBar/navBar";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import Sponsors from "./components/sponsors/sponsors";
 import Highlights from "./components/highlights/highlights";
+import Matches from "./components/matchesList/matchesList";
+import About from "./components/about/about";
 
 export default function Home() {
   const [cartProducts, setCartProducts] = useState<productType[]>([]);
@@ -18,6 +20,8 @@ export default function Home() {
         <HomePage />
         <Sponsors />
         <Highlights />
+        <Matches />
+        <About />
       </main>
     </cartContext.Provider>
   );
