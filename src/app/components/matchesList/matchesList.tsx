@@ -17,8 +17,8 @@ export type MatchDataType = {
 
 function Matches() {
   return (
-    <div className="flex items-center justify-center mt-64">
-      <div className="listGrid">
+    <div className="flex items-center justify-center mt-64 relative z-40">
+      <div className="listGrid relative -bottom-24">
         <div className=" relative">
           <MatchListOne />
           <div className="matchListBg1 grayscale-[1] absolute w-full h-full top-0 left-0 z-10"></div>

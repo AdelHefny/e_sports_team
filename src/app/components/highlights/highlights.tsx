@@ -64,7 +64,7 @@ function Highlights() {
               alt="highlights"
               className="object-cover w-full"
             />
-            <div className="absolute w-16 h-16 rounded-full transition duration-500 top-1/2 left-1/2 flex items-center justify-center bg-purple z-40">
+            <div className="absolute w-16 h-16 rounded-full transition duration-500 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center bg-purple z-40">
               <FontAwesomeIcon icon={faPlay} size="xl" />
             </div>
           </div>

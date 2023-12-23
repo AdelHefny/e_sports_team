@@ -13,6 +13,7 @@ const config: Config = {
       transparent: "transparent",
       current: "currentColor",
       white: "#ffffff",
+      black: "#000000",
       phosphoras: "#09233a",
       gray: {
         "300": "#c2c0c0",

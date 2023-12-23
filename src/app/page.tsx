@@ -7,6 +7,7 @@ import Sponsors from "./components/sponsors/sponsors";
 import Highlights from "./components/highlights/highlights";
 import Matches from "./components/matchesList/matchesList";
 import About from "./components/about/about";
+import Gallary from "./components/gallary/gallary";
 
 export default function Home() {
   const [cartProducts, setCartProducts] = useState<productType[]>([]);
@@ -22,6 +23,7 @@ export default function Home() {
         <Highlights />
         <Matches />
         <About />
+        <Gallary />
       </main>
     </cartContext.Provider>
   );

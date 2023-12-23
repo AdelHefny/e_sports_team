@@ -1,0 +1,58 @@
+.btn::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+  background-color: #8442fd;
+  transition: all 0.5s;
+  transform: translateY(50%);
+}
+.btn {
+  transition: all 0.5s;
+}
+.btn:hover::before {
+  top: 100%;
+  opacity: 1;
+}
+.btn:hover {
+  color: #8442fd;
+}
+.btn.active {
+  color: #8442fd;
+}
+.btn.active::before {
+  top: 100%;
+  opacity: 1;
+}
+.myGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+}
+@media (max-width: 1024px) {
+  .myGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.photoCard img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.photoCard div {
+  opacity: 0;
+  transition: all 300ms;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.photoCard:hover div {
+  display: flex !important;
+  opacity: 1;
+  width: calc(59% + 10px);
+  height: calc(59% + 10px);
+}
