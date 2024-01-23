@@ -1,0 +1,10 @@
+.wave {
+  background-image: url("./layered-waves-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 900/600;
+  position: absolute;
+  bottom: 0;
+  z-index: 20;
+}

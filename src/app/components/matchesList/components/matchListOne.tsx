@@ -74,6 +74,7 @@ function MatchListOne() {
               className={`bg-gray-800 ${
                 match == ele.id ? "" : "bg-opacity-50"
               } w-3 h-3  rounded-[100%]`}
+              key={ele.id}
               onClick={() => {
                 if (ele.id != match) {
                   setMatch(ele.id);

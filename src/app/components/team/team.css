@@ -1,0 +1,42 @@
+.textContainer {
+  transform-style: preserve-3d;
+  perspective: 400px;
+  text-align: center;
+}
+
+.movingText {
+  transition: all 0.1s;
+}
+.movingText {
+  text-align: center;
+}
+.slide-item {
+  min-width: calc(calc(100 / 3) * 1%);
+  position: relative;
+  height: 575px;
+  width: 470;
+  max-width: 100%;
+  overflow: hidden;
+}
+.slide-item img {
+  object-fit: cover;
+  transition: 0.5s;
+  filter: grayscale(1);
+}
+.active {
+  transform: scale(1.1);
+  transition: 0.3s;
+  z-index: 30;
+}
+.active img {
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+.slider {
+  transition: 0.5s;
+}
+@media (max-width: 768px) {
+  .slide-item {
+    min-width: calc(calc(100 / 1) * 1%);
+  }
+}

@@ -30,7 +30,6 @@ function PhotoCard({
       <li
         className="relative w-full transition-all photoCard duration-300 lg:h-[150px] grayscale-[1] hover:grayscale-0 before:bg-extraPurple hover:before:bg-opacity-25 before:bg-opacity-0 before:transition-all before:duration-300 hover:before:absolute before:top-0 before:left-0 before:content-[''] before:w-full before:h-full cursor-pointer"
         key={cardData.id}
-        data-Id={cardData.id}
         onClick={() => {
           setShowModal(!showModal);
         }}

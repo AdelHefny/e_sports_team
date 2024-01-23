@@ -8,6 +8,8 @@ import Highlights from "./components/highlights/highlights";
 import Matches from "./components/matchesList/matchesList";
 import About from "./components/about/about";
 import Gallary from "./components/gallary/gallary";
+import Team from "./components/team/team";
+import Blog from "./components/blog/blog";
 
 export default function Home() {
   const [cartProducts, setCartProducts] = useState<productType[]>([]);
@@ -16,7 +18,7 @@ export default function Home() {
   };
   return (
     <cartContext.Provider value={[cartProducts, cartSetter]}>
-      <main className="bg-gray-850 spotLight overflow-hidden relative">
+      <main className="bg-gray-850 spotLight relative overflow-hidden">
         <NavBar />
         <HomePage />
         <Sponsors />
@@ -24,6 +26,8 @@ export default function Home() {
         <Matches />
         <About />
         <Gallary />
+        <Team />
+        <Blog />
       </main>
     </cartContext.Provider>
   );
