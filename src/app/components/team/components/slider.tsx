@@ -8,6 +8,10 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 type teamMember = {
   id: number;
   hisName: string;
@@ -110,13 +114,15 @@ function Slider() {
     }
   }, []);
   return (
-    <div className="h-fit relative">
+    <div className="h-fit relative players">
       <button
-        className="absolute top-0 left-0 w-16 h-full bg-transparent hover:bg-purple bg-opacity-60 z-30"
+        className="absolute bottom-0 left-0 w-16 h-[575px] z-30"
         onClick={() => {
           handleClick(true);
         }}
-      ></button>
+      >
+        <FontAwesomeIcon icon={faChevronLeft} size="2xl" />
+      </button>
       <section
         className="mt-8 flex flex-row items-center justify-start slide"
         ref={slider}
@@ -166,11 +172,13 @@ function Slider() {
         ))}
       </section>
       <button
-        className="absolute top-0 right-0 w-16 h-full bg-transparent hover:bg-purple bg-opacity-60"
+        className="absolute bottom-0 right-0 w-16 h-[575px] bg-transparent bg-opacity-60"
         onClick={() => {
           handleClick(false);
         }}
-      ></button>
+      >
+        <FontAwesomeIcon icon={faChevronRight} size="2xl" />
+      </button>
     </div>
   );
 }

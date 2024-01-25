@@ -25,6 +25,14 @@ function Gallary() {
             setFilteredImgs(imgs);
             removeActive();
             target.classList.add("active");
+            if (ourGrid.current) {
+              for (let i = 0; i < ourGrid.current.children.length; i++) {
+                ourGrid.current?.children[i].classList.remove("hidden");
+                setTimeout(() => {
+                  ourGrid.current?.children[i].classList.remove("disabledd");
+                }, 100);
+              }
+            }
           }}
         >
           ALL
@@ -39,20 +47,42 @@ function Gallary() {
               if (ele.category != "team") ids.push(ele.id);
             });
             if (ourGrid.current) {
-              for (let i = 0; i < ids.length; i++) {
-                for (let j = 0; j < ourGrid.current.children.length; j++) {
+              let removes = [];
+              let adds: number[] = [];
+              for (let j = 0; j < ourGrid.current.children.length; j++) {
+                let condition = false;
+                for (let i = 0; i < ids.length; i++) {
                   if (
-                    ourGrid.current.children[j].getAttribute("data-Id") ==
+                    ourGrid.current.children[j].getAttribute("id") ==
                     ids[i].toString()
                   ) {
-                    ourGrid.current.children[j].classList.add("opacity-0");
+                    condition = true;
+                    break;
                   }
                 }
+                if (condition) {
+                  removes.push(j);
+                } else {
+                  adds.push(j);
+                }
               }
+              removes.forEach((ele) => {
+                ourGrid.current?.children[ele].classList.add("disabledd");
+                setTimeout(() => {
+                  ourGrid.current?.children[ele].classList.add("hidden");
+                }, 400);
+              });
+              setTimeout(() => {
+                adds.forEach((ele) => {
+                  ourGrid.current?.children[ele].classList.remove("hidden");
+                  setTimeout(() => {
+                    ourGrid.current?.children[ele].classList.remove(
+                      "disabledd"
+                    );
+                  }, 100);
+                });
+              }, 400);
             }
-            setTimeout(() => {
-              setFilteredImgs(imgs.filter((ele) => ele.category == "team"));
-            }, 500);
           }}
         >
           TEAM
@@ -67,20 +97,42 @@ function Gallary() {
               if (ele.category != "players") ids.push(ele.id);
             });
             if (ourGrid.current) {
-              for (let i = 0; i < ids.length; i++) {
-                for (let j = 0; j < ourGrid.current.children.length; j++) {
+              let removes = [];
+              let adds: number[] = [];
+              for (let j = 0; j < ourGrid.current.children.length; j++) {
+                let condition = false;
+                for (let i = 0; i < ids.length; i++) {
                   if (
-                    ourGrid.current.children[j].getAttribute("data-Id") ==
+                    ourGrid.current.children[j].getAttribute("id") ==
                     ids[i].toString()
                   ) {
-                    ourGrid.current.children[j].classList.add("opacity-0");
+                    condition = true;
+                    break;
                   }
                 }
+                if (condition) {
+                  removes.push(j);
+                } else {
+                  adds.push(j);
+                }
               }
+              removes.forEach((ele) => {
+                ourGrid.current?.children[ele].classList.add("disabledd");
+                setTimeout(() => {
+                  ourGrid.current?.children[ele].classList.add("hidden");
+                }, 400);
+              });
+              setTimeout(() => {
+                adds.forEach((ele) => {
+                  ourGrid.current?.children[ele].classList.remove("hidden");
+                  setTimeout(() => {
+                    ourGrid.current?.children[ele].classList.remove(
+                      "disabledd"
+                    );
+                  }, 100);
+                });
+              }, 400);
             }
-            setTimeout(() => {
-              setFilteredImgs(imgs.filter((ele) => ele.category == "players"));
-            }, 500);
           }}
         >
           PLAYERS
@@ -95,20 +147,42 @@ function Gallary() {
               if (ele.category != "matches") ids.push(ele.id);
             });
             if (ourGrid.current) {
-              for (let i = 0; i < ids.length; i++) {
-                for (let j = 0; j < ourGrid.current.children.length; j++) {
+              let removes = [];
+              let adds: number[] = [];
+              for (let j = 0; j < ourGrid.current.children.length; j++) {
+                let condition = false;
+                for (let i = 0; i < ids.length; i++) {
                   if (
-                    ourGrid.current.children[j].getAttribute("data-Id") ==
+                    ourGrid.current.children[j].getAttribute("id") ==
                     ids[i].toString()
                   ) {
-                    ourGrid.current.children[j].classList.add("opacity-0");
+                    condition = true;
+                    break;
                   }
                 }
+                if (condition) {
+                  removes.push(j);
+                } else {
+                  adds.push(j);
+                }
               }
+              removes.forEach((ele) => {
+                ourGrid.current?.children[ele].classList.add("disabledd");
+                setTimeout(() => {
+                  ourGrid.current?.children[ele].classList.add("hidden");
+                }, 400);
+              });
+              setTimeout(() => {
+                adds.forEach((ele) => {
+                  ourGrid.current?.children[ele].classList.remove("hidden");
+                  setTimeout(() => {
+                    ourGrid.current?.children[ele].classList.remove(
+                      "disabledd"
+                    );
+                  }, 100);
+                });
+              }, 400);
             }
-            setTimeout(() => {
-              setFilteredImgs(imgs.filter((ele) => ele.category == "matches"));
-            }, 500);
           }}
         >
           MATCHES

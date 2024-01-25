@@ -44,6 +44,11 @@
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+.photoCard {
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.4s;
+}
 .photoCard div {
   opacity: 0;
   transition: all 300ms;
@@ -55,4 +60,7 @@
   opacity: 1;
   width: calc(59% + 10px);
   height: calc(59% + 10px);
+}
+.disabledd {
+  transform: scale(0);
 }

@@ -33,6 +33,7 @@ function PhotoCard({
         onClick={() => {
           setShowModal(!showModal);
         }}
+        id={`${cardData.id}`}
       >
         <Image
           src={cardData.imgSm}

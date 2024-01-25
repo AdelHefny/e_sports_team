@@ -14,7 +14,7 @@
   min-width: calc(calc(100 / 3) * 1%);
   position: relative;
   height: 575px;
-  width: 470;
+  width: 470px;
   max-width: 100%;
   overflow: hidden;
 }
@@ -34,6 +34,19 @@
 }
 .slider {
   transition: 0.5s;
+}
+.players button {
+  opacity: 0;
+  background-color: #8342fd31;
+  transition: 0.5s;
+}
+.players:hover button {
+  opacity: 0.8;
+}
+
+.players button:hover {
+  background-color: #696cff41;
+  opacity: 0.9;
 }
 @media (max-width: 768px) {
   .slide-item {
