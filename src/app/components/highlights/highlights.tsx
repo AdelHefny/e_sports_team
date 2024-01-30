@@ -25,14 +25,30 @@ function Highlights() {
   useEffect(() => {
     document.addEventListener("scroll", () => {
       if (document.documentElement.scrollTop >= 550) {
-        let scale =
-          (document.documentElement.scrollTop - 150) / window.innerHeight;
+        let scale = Math.min(
+          (document.documentElement.scrollTop - 150) / window.innerHeight,
+          1
+        );
         document.documentElement.style.setProperty(
           "--highlightScale",
           scale.toString()
         );
       }
     });
+    return () => {
+      document.removeEventListener("scroll", () => {
+        if (document.documentElement.scrollTop >= 550) {
+          let scale = Math.min(
+            (document.documentElement.scrollTop - 150) / window.innerHeight,
+            1
+          );
+          document.documentElement.style.setProperty(
+            "--highlightScale",
+            scale.toString()
+          );
+        }
+      });
+    };
   }, []);
   return (
     <>

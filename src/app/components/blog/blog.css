@@ -8,3 +8,38 @@
   bottom: 0;
   z-index: 20;
 }
+.blogButtons {
+  opacity: 0.6;
+}
+.blogBtn {
+  opacity: 0.7;
+}
+.blog:hover .blogButtons,
+.blogBtn:hover {
+  opacity: 1;
+}
+.postImg:hover img {
+  filter: grayscale(1);
+}
+.counters {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition: 0.5s ease-in-out;
+}
+.post:hover .counters {
+  transform: translateY(-100%);
+  opacity: 1;
+}
+.blogPost:hover .blogTitle {
+  color: #575aff;
+}
+.blogPost:hover .blogContent {
+  color: white;
+}
+.blogPost .blogTitle:hover {
+  color: #8442fd;
+  cursor: pointer;
+}
+.slider-transition {
+  transition: transform 0.5s ease-in-out;
+}

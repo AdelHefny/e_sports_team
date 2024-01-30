@@ -10,7 +10,6 @@ import About from "./components/about/about";
 import Gallary from "./components/gallary/gallary";
 import Team from "./components/team/team";
 import Blog from "./components/blog/blog";
-
 export default function Home() {
   const [cartProducts, setCartProducts] = useState<productType[]>([]);
   const cartSetter = (productToAdd: productType) => {
