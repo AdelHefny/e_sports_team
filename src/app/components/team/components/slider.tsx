@@ -20,36 +20,48 @@ type teamMember = {
   twitter: string;
   steam: string;
 }[];
+const newTeam = [
+  teamMembers[teamMembers.length - 3],
+  teamMembers[teamMembers.length - 2],
+  teamMembers[teamMembers.length - 1],
+  ...teamMembers,
+  teamMembers[0],
+  teamMembers[1],
+  teamMembers[2],
+];
 function Slider() {
-  const [team, setTeam] = useState<teamMember>(teamMembers);
   const [sliderTrans, setSliderTrans] = useState(true);
   const [slide, setSlide] = useState(2);
   const slider = useRef<HTMLDivElement>(null);
   const player = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const handleTransitionStart = () => {
+      player.current.style.transition = "0s";
+      slider.current.style.transition = "0s";
       setSliderTrans(false);
     };
     const handleTransitionEnd = () => {
       setSliderTrans(true);
       if (slider.current && player.current) {
-        console.log(slide);
-        if (slide >= team.length - 3) {
-          player.current.style.transition = "0s";
-          slider.current.style.transition = "0s";
+        if (slide >= newTeam.length - 3) {
+          let ele = slider.current.getElementsByClassName(
+            "slide-item"
+          )[4] as HTMLDivElement;
+          ele.style.transition = "0s";
+          setSlide(3);
           slider.current.style.transform = `translateX(${
             -player.current.clientWidth * 3
           }px)`;
-          setSlide(3);
         }
         if (slide <= 0) {
-          player.current.style.transition = "0s";
-          slider.current.style.transition = "0s";
+          let ele = slider.current.getElementsByClassName("slide-item")[
+            newTeam.length - 5
+          ] as HTMLDivElement;
+          ele.style.transition = "0s";
+          setSlide(newTeam.length - 6);
           slider.current.style.transform = `translateX(${
-            -player.current.clientWidth * (team.length - 6)
+            -player.current.clientWidth * (newTeam.length - 6)
           }px)`;
-          setSlide(team.length - 6);
         }
       }
     };
@@ -63,29 +75,46 @@ function Slider() {
       );
       slider.current?.removeEventListener("transitionend", handleTransitionEnd);
     };
-  }, [slide, team.length]);
+  }, [slide]);
 
   const handleClick = (left: boolean) => {
-    if (slider.current && player.current && sliderTrans) {
+    if (slider.current && sliderTrans) {
       let mod = 0;
       if (window.innerWidth <= 768) {
         mod = 1;
       }
       if (left) {
         if (slide > 0) {
-          console.log(window.innerWidth);
           setSlide((prevSlide) => prevSlide - 1);
           slider.current.style.transition = "0.5s";
+          let fromEle = slider.current.getElementsByClassName("slide-item")[
+            slide + 1
+          ] as HTMLDivElement;
+          fromEle.style.transition = "0.5s";
+          let toEle = slider.current.getElementsByClassName("slide-item")[
+            slide
+          ] as HTMLDivElement;
+          toEle.style.transition = "0.5s";
           slider.current.style.transform = `translateX(${
-            -player.current.clientWidth * (slide - 1 + mod)
+            -slider.current.getElementsByTagName("div")[0].clientWidth *
+            (slide - 1 + mod)
           }px)`;
         }
       } else {
         if (slide < 13) {
           setSlide((prevSlide) => prevSlide + 1);
           slider.current.style.transition = "0.5s";
+          let fromEle = slider.current.getElementsByClassName("slide-item")[
+            slide + 1
+          ] as HTMLDivElement;
+          fromEle.style.transition = "0.5s";
+          let ele = slider.current.getElementsByClassName("slide-item")[
+            slide + 2
+          ] as HTMLDivElement;
+          ele.style.transition = "0.5s";
           slider.current.style.transform = `translateX(${
-            -player.current.clientWidth * (slide + 1 + mod)
+            -slider.current.getElementsByTagName("div")[0].clientWidth *
+            (slide + 1 + mod)
           }px)`;
         }
       }
@@ -93,23 +122,14 @@ function Slider() {
   };
 
   useEffect(() => {
-    const emptyTeam = [
-      team[team.length - 3],
-      team[team.length - 2],
-      team[team.length - 1],
-      ...team,
-      team[0],
-      team[1],
-      team[2],
-    ];
-    setTeam(emptyTeam);
     let mod = 0;
     if (window.innerWidth <= 768) {
       mod = 1;
     }
-    if (slider.current && player.current) {
+    if (slider.current) {
       slider.current.style.transform = `translateX(${
-        -player.current.clientWidth * (slide + mod)
+        -slider.current.getElementsByTagName("div")[0].clientWidth *
+        (slide + mod)
       }px)`;
     }
   }, []);
@@ -127,7 +147,7 @@ function Slider() {
         className="mt-8 flex flex-row items-center justify-start slide"
         ref={slider}
       >
-        {team.map((ele, index) => (
+        {newTeam.map((ele, index) => (
           <div
             className={`slide-item relative overflow-auto before:content-[''] before:z-20 before:absolute before:bg-opacity-70 before:top-0 before:w-full before:h-full ${
               index == slide + 1

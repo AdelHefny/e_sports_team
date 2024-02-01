@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./blog.css";
 import BlogSlider from "./components/blogSlider";
 function Blog() {

@@ -17,10 +17,10 @@
   width: 470px;
   max-width: 100%;
   overflow: hidden;
+  transition: all 0s;
 }
 .slide-item img {
   object-fit: cover;
-  transition: 0.5s;
   filter: grayscale(1);
 }
 .active {

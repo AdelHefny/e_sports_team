@@ -110,8 +110,8 @@ function BlogSlider() {
           className="flex flex-row itmes-center space-x-8 blogPostss"
           ref={slider}
         >
-          {newData.map((ele) => (
-            <BlogPost postData={ele} key={ele.id} slide={slide} />
+          {newData.map((ele, index) => (
+            <BlogPost postData={ele} key={index} slide={slide} />
           ))}
         </section>
       </section>
