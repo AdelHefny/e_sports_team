@@ -43,6 +43,10 @@ function Slider() {
     const handleTransitionEnd = () => {
       setSliderTrans(true);
       if (slider.current && player.current) {
+        let mod = 0;
+        if (window.innerWidth <= 768) {
+          mod = 1;
+        }
         if (slide >= newTeam.length - 3) {
           let ele = slider.current.getElementsByClassName(
             "slide-item"
@@ -50,7 +54,7 @@ function Slider() {
           ele.style.transition = "0s";
           setSlide(3);
           slider.current.style.transform = `translateX(${
-            -player.current.clientWidth * 3
+            -player.current.clientWidth * (3 + mod)
           }px)`;
         }
         if (slide <= 0) {
@@ -60,7 +64,7 @@ function Slider() {
           ele.style.transition = "0s";
           setSlide(newTeam.length - 6);
           slider.current.style.transform = `translateX(${
-            -player.current.clientWidth * (newTeam.length - 6)
+            -player.current.clientWidth * (newTeam.length - 6 + mod)
           }px)`;
         }
       }

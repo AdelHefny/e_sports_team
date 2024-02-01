@@ -12,13 +12,13 @@ function About() {
       <div className="relative flex flex-col space-y-28 lg:space-y-0 lg:flex-row items-center lg:pl-60 pt-52 z-30 h-full">
         <section className="w-[90%] lg:w-1/2 flex flex-col justify-between min-h-[400px] h-1/2 bottom-0">
           <h3
-            className="opacity-80 text-3xl font-[600]"
+            className="opacity-80 text-2xl sm:text-3xl font-[600]"
             style={{ color: "#bba5fd" }}
           >
             Go Hard or Go Home.
           </h3>
           <div className="h-48 flex flex-col justify-between">
-            <h1 className="text-5xl font-[600] leading-[1.384615384615385em]">
+            <h1 className="text-4xl sm:text-5xl font-[600] leading-[1.384615384615385em]">
               Find out about our history in the about us page.
             </h1>
           </div>
