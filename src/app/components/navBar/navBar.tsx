@@ -76,6 +76,7 @@ function NavBar() {
                 icon={faSteam}
                 className="text-purple w-8 h-5 hover:text-white transition duration-500"
               />
+              <span className="hidden">steam page</span>
             </Link>
           </li>
           <li>
@@ -84,6 +85,7 @@ function NavBar() {
                 icon={faTwitch}
                 className="text-purple w-8 h-5 hover:text-white transition duration-500"
               />
+              <span className="hidden">twitch page</span>
             </Link>
           </li>
           <li>
@@ -92,6 +94,7 @@ function NavBar() {
                 icon={faDiscord}
                 className="text-purple w-8 h-5 hover:text-white transition duration-500"
               />
+              <span className="hidden">discord page</span>
             </Link>
           </li>
         </ul>

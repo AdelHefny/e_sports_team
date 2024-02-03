@@ -91,6 +91,7 @@ function BlogSlider() {
               }}
               className="transition-opacity duration-500 blogBtn"
             >
+              <span className="hidden">back</span>
               <FontAwesomeIcon icon={faChevronLeft} size="2xl" />
             </button>
             <button
@@ -99,6 +100,7 @@ function BlogSlider() {
               }}
               className="transition-opacity duration-500 blogBtn"
             >
+              <span className="hidden">forward</span>
               <FontAwesomeIcon icon={faChevronRight} size="2xl" />
             </button>
           </div>

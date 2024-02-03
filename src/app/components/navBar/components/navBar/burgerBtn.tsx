@@ -29,6 +29,7 @@ function BurgerBtn() {
             ? `after:-rotate-45 after:-translate-y-1/2 after:bottom-1/4`
             : "after:bottom-0"
         } after:h-[4px] after:w-full after:bg-purple`}
+        aria-label="show menu"
       >
         <span
           className={`${

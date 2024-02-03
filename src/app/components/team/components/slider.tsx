@@ -145,6 +145,7 @@ function Slider() {
           handleClick(true);
         }}
       >
+        <span className="hidden">back</span>
         <FontAwesomeIcon icon={faChevronLeft} size="2xl" />
       </button>
       <section
@@ -177,18 +178,21 @@ function Slider() {
                     icon={faFacebook}
                     className="hover:text-extraPurple transition duration-1000"
                   />
+                  <span className="hidden">facebook</span>
                 </Link>
                 <Link href={ele.twitter} target="_blank">
                   <FontAwesomeIcon
                     icon={faTwitter}
                     className="hover:text-extraPurple transition duration-1000"
                   />
+                  <span className="hidden">twitter</span>
                 </Link>
                 <Link href={ele.steam} target="_blank">
                   <FontAwesomeIcon
                     icon={faSteam}
                     className="hover:text-extraPurple transition duration-1000"
                   />
+                  <span className="hidden">steam</span>
                 </Link>
               </div>
             </div>
@@ -201,6 +205,7 @@ function Slider() {
           handleClick(false);
         }}
       >
+        <span className="hidden">forward</span>
         <FontAwesomeIcon icon={faChevronRight} size="2xl" />
       </button>
     </div>

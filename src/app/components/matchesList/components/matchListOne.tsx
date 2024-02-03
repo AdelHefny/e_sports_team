@@ -65,6 +65,7 @@ function MatchListOne() {
             handleEffect(true);
           }}
         >
+          <span className="hidden">backward</span>
           <FontAwesomeIcon icon={faAngleLeft} size="xl" />
         </button>
         <MatchCard matchData={matchListShort[match]} refEle={matchEle} />
@@ -81,7 +82,9 @@ function MatchListOne() {
                   transition();
                 }
               }}
-            ></button>
+            >
+              <span className="hidden">go to {ele.id} match</span>
+            </button>
           ))}
         </section>
         <button
@@ -90,6 +93,7 @@ function MatchListOne() {
             handleEffect(false);
           }}
         >
+          <span className="hidden">forward</span>
           <FontAwesomeIcon icon={faAngleRight} size="xl" />
         </button>
       </section>

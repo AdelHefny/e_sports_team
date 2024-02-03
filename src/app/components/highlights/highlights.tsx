@@ -26,7 +26,12 @@ function Highlights() {
     document.addEventListener("scroll", () => {
       if (document.documentElement.scrollTop >= 550) {
         let scale = Math.min(
-          (document.documentElement.scrollTop - 150) / window.innerHeight,
+          Number(
+            (
+              (document.documentElement.scrollTop - 150) /
+              window.innerHeight
+            ).toFixed(2)
+          ),
           1
         );
         document.documentElement.style.setProperty(
