@@ -33,7 +33,7 @@ export default function Home() {
       <main className="bg-gray-850 spotLight relative overflow-hidden">
         <button
           className={`fixed bottom-10 right-8 w-10 h-10  goTopBtn ${
-            window.scrollY > 200 ? "z-50 opacity-100" : "opacity-0 -z-0"
+            scrollTopVisible ? "z-50 opacity-100" : "opacity-0 -z-0"
           }`}
           onClick={() => {
             window.scrollTo({
